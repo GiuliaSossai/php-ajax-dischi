@@ -1,0 +1,44 @@
+/* .main-wrapper {
+   height: 100vh;
+} */
+
+body {
+   background-color: #1E2D3B;
+}
+
+/* header */
+header {
+   background-color: #40617F;
+   padding: 1rem;
+   margin-bottom: 3rem;
+}
+
+header img{
+   width: 50px;
+}
+
+select {
+   width: 200px;
+}
+
+
+/* disco */
+.gs-album{
+   width: 19%;
+   margin: 0 0.5%;
+   flex-shrink: 1;
+   min-height: 400px;
+   background-color: #40617F;
+}
+
+.gs-album img {
+   width: 80%;
+}
+
+.gs-album h4 {
+   color: #F6F9FB;
+}
+
+.gs-album p {
+   color: #6F94B6;
+}
