@@ -27,14 +27,6 @@ require_once __DIR__ . "/db.php";
                <img src="./img/logo.png" alt="">
             </div>
 
-            <!-- <select>
-               <option value="Tutti">Tutti</option>
-               <option value="Rock">Rock</option>
-               <option value="Pop">Pop</option>
-               <option value="Jazz">Jazz</option>
-               <option value="Metal">Metal</option>
-            </select> -->
-
             <select 
                @change="getApi()"
                class="form-select w-25"
@@ -57,15 +49,16 @@ require_once __DIR__ . "/db.php";
          <div class="container">
             <div class="row">
                <!-- disco singolo -->
-               <?php foreach($albums as $album) {?>
-               <div class="text-center mb-5 py-3 gs-album">
-                  <img src="<?php echo $album['poster'] ?>" alt="<?php echo $album['title'] ?>">
-                  <h4 class="text-uppercase font-weight-bold my-2"><?php echo $album['title'] ?></h4>
-                  <p class="m-0"><?php echo $album['author'] ?></p>
-                  <p class="m-0"><?php echo $album['year'] ?></p>
+               <div 
+                  class="text-center mb-5 py-3 gs-album"
+                  v-for="album in albums"
+               >
+                  <img :src="album.poster" :alt="album.title">
+                  <h4 class="text-uppercase font-weight-bold my-2">{{album.title}}</h4>
+                  <p class="m-0">{{album.author}}</p>
+                  <p class="m-0">{{album.year}}</p>
               </div>
-              <?php } ?> 
-
+               
             </div>  
          </div>
           
