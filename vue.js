@@ -10,13 +10,11 @@ const app = new Vue ({
       getApi(){ 
          axios.get(this.db)
          .then(r =>{
-             this.discs = r.data;
-             // console.log(this.discs);
-             this.option();
-
+            this.discs = r.data;
+            this.option();
          })
          .catch(e =>{
-             console.log(e);
+            console.log(e);
          })
      },
 
